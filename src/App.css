@@ -1,0 +1,140 @@
+body {
+    background-color: #121212;
+    font-family: montserrat, sans-serif;
+    color: white;
+}
+
+.app {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-side {
+    display: flex;
+    flex: 0 0 15%;
+    min-width: 0;
+    flex-direction: column;
+    transition: flex-basis 0.5s ease;
+
+    &.hidden {
+        flex: 0 0 0;
+        width: 0;
+        min-width: 0;
+        visibility: hidden;
+        transition: flex-basis 0.5s ease;
+    }
+}
+
+.tracks {
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 65vh;
+
+    p {
+        width: 90%;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
+}
+
+.metadata {
+    margin: 15px 0 0 0;
+    border-top: 1px solid white;
+    p {
+        width: 90%;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &.empty p {
+        opacity: 0.5;
+    }
+    .lyrics-on-button{
+        width: fit-content;
+        cursor: pointer;
+        transition: 200ms ease;
+        font-size: 200%;
+        margin: 0;
+        &:hover {
+            transition: 200ms ease;
+            color: #49ff49;
+        }
+    }
+}
+
+
+
+.audio-player {
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+
+.audio-seeker {
+    width: 80%;
+}
+
+.albums-container {
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    justify-content: center;
+    gap: 1.25rem;
+    height: 98dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.album-container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+
+    .cover-image-container{
+        height: 220px;
+        img {
+            transition: 200ms ease;
+            border-radius: 15px;
+            height: 100%;
+
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    transition: 200ms ease;
+
+    &:hover {
+        transition: 200ms ease;
+        transform: scale(1.05);
+    }
+}
+
+.album-container-selected {
+    img {
+        transition: 200ms ease;
+        box-shadow: 0 0 1.875rem 0.0625rem rgb(0 165 0 / 0.61);
+    }
+}
+
+.track {
+    cursor: pointer;
+}
+
+.track-selected {
+    color: #58ff58;
+}
+
