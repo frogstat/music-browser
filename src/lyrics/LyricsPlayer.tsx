@@ -1,6 +1,5 @@
 import {useLyricsPlayer} from "./hooks/useLyricsPlayer.ts";
 import ScrollDownLyrics from "./ScrollDownLyrics.tsx";
-import "./Lyrics.css"
 
 import LyricsAudioPlayer from "./audio/LyricsAudioPlayer.tsx";
 import type {LyricRow, Metadata} from "./utils/types.ts";
